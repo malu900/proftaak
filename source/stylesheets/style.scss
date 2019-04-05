@@ -1,0 +1,157 @@
+$almostWhite: rgb(244, 250, 255);
+$almostWhiteTransparant: rgba(244, 250, 255, 0.5);
+$mainBlueColor: #3597ee;
+%centerDiv {
+  width: 75%;
+  margin: 0 auto;
+  padding: 40px 0px;
+}
+
+/****** Presets ******/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+/****** Progress bar ******/
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+
+  .progress-container {
+    background: $almostWhite;
+  }
+
+  .progress-bar {
+    height: 5px;
+    width: 0%;
+    background-color: $mainBlueColor;
+  }
+}
+.viewHeight {
+  height: 2000px;
+}
+
+.tips-container{
+  height: 3000px;
+}
+/****** Navigation bars ******/
+#nav-bars {
+  padding: 15px;
+  width: min-content;
+  width: -moz-min-content;
+  float: right;
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+
+    div {
+      align-self: flex-end;
+      height: 4px;
+      width: 100%;
+      background: $mainBlueColor;
+    }
+    .meat {
+      width: 75%;
+      transition: all 200ms ease-in-out;
+    }
+    .bottom-bun {
+      width: 50%;
+      transition: all 400ms ease-in-out;
+    }
+    &:hover {
+      div {
+        width: 100%;
+      }
+    }
+  }
+}
+/****** Navigation content  ******/
+.nav-content {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: $mainBlueColor;
+  overflow-x: hidden;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &-header {
+    @extend %centerDiv;
+    border-bottom: 1px solid $almostWhiteTransparant;
+
+    & i {
+      font-size: 1.5rem;
+      -webkit-text-stroke: 2px $mainBlueColor;
+      float: right;
+      color: white;
+    }
+  }
+
+  &-center {
+    align-self: center;
+    width: 75%;
+
+    a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #f4faff;
+      display: block;
+      transition: 0.3s;
+      font-size: 2.1rem;
+      font-weight: 700;
+
+      &:hover {
+        color: #dff5f3;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &-footer {
+    @extend %centerDiv;
+    border-top: 1px solid $almostWhiteTransparant;
+
+    &-links {
+      display: flex;
+      justify-content: space-between;
+
+      & a {
+        color: $almostWhite !important;
+      }
+    }
+  }
+}
+
+/****** ******/
+
+@media screen and (max-height: 450px) {
+  /****** Navigation ******/
+  .nav-content {
+    padding-top: 15px;
+    a {
+      font-size: 18px;
+    }
+  }
+}

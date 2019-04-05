@@ -1,0 +1,145 @@
+.nav-content-footer, .nav-content-header {
+  width: 75%;
+  margin: 0 auto;
+  padding: 40px 0px;
+}
+
+/****** Presets ******/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/****** Progress bar ******/
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+.header .progress-container {
+  background: #f4faff;
+}
+.header .progress-bar {
+  height: 5px;
+  width: 0%;
+  background-color: #3597ee;
+}
+
+.viewHeight {
+  height: 2000px;
+}
+
+.tips-container {
+  height: 3000px;
+}
+
+/****** Navigation bars ******/
+#nav-bars {
+  padding: 15px;
+  width: min-content;
+  width: -moz-min-content;
+  float: right;
+}
+#nav-bars .hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+}
+#nav-bars .hamburger div {
+  align-self: flex-end;
+  height: 4px;
+  width: 100%;
+  background: #3597ee;
+}
+#nav-bars .hamburger .meat {
+  width: 75%;
+  transition: all 200ms ease-in-out;
+}
+#nav-bars .hamburger .bottom-bun {
+  width: 50%;
+  transition: all 400ms ease-in-out;
+}
+#nav-bars .hamburger:hover div {
+  width: 100%;
+}
+
+/****** Navigation content  ******/
+.nav-content {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #3597ee;
+  overflow-x: hidden;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.nav-content-header {
+  border-bottom: 1px solid rgba(244, 250, 255, 0.5);
+}
+.nav-content-header i {
+  font-size: 1.5rem;
+  -webkit-text-stroke: 2px #3597ee;
+  float: right;
+  color: white;
+}
+.nav-content-center {
+  align-self: center;
+  width: 75%;
+}
+.nav-content-center a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f4faff;
+  display: block;
+  transition: 0.3s;
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+.nav-content-center a:hover {
+  color: #dff5f3;
+  text-decoration: none;
+}
+.nav-content-footer {
+  border-top: 1px solid rgba(244, 250, 255, 0.5);
+}
+.nav-content-footer-links {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-content-footer-links a {
+  color: #f4faff !important;
+}
+
+/****** ******/
+@media screen and (max-height: 450px) {
+  /****** Navigation ******/
+  .nav-content {
+    padding-top: 15px;
+  }
+  .nav-content a {
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
