@@ -116,6 +116,7 @@ li {
   display: flex;
 }
 .nav-content-center ul li {
+  display: none;
   float: left;
   display: flex;
   align-items: center;
@@ -125,15 +126,11 @@ li {
   font-size: 1.9rem;
   font-weight: 700;
 }
-.nav-content-center ul li .first-item::before {
-  display: none !important;
-  content: none !important;
-}
 .nav-content-center ul li::before {
   content: "•";
   color: white;
   font-weight: bold;
-  font-size: 5px;
+  font-size: 1rem;
   display: inline-block;
   width: 1em;
   margin-left: -1em;
@@ -162,7 +159,27 @@ li {
   border: 2px solid rgba(244, 250, 255, 0.5);
   padding: 10px;
   color: white !important;
+  background-color: #3597ee;
   cursor: pointer;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 200ms ease-in;
+  transform: scale(1);
+  z-index: 99;
+}
+.nav-content-footer-button:hover {
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.2);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.2);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.2);
+  transition: all 200ms ease-in;
+  transform: scale(1.2);
 }
 .nav-content-footer-links {
   display: flex;
@@ -245,6 +262,7 @@ li {
   }
   .nav-content-center a {
     padding: 8px;
+    font-size: 1.4rem !important;
   }
   .nav-content-footer {
     padding: 0 0 50px 0;

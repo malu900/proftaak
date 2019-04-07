@@ -128,31 +128,27 @@ li {
     align-self: center;
     width: 75%;
 
-    ul{
+    ul {
       margin: 0;
-      display: flex;  
-      li{
-        // display: none;
+      display: flex;
+
+      li {
+        display: none;
         float: left;
         display: flex;
         align-items: center;
         margin: 0 0.5rem;
 
-        .first-item{
+        .first-item {
           font-size: 1.9rem;
           font-weight: 700;
-
-          &::before{
-            display: none!important;
-            content: none!important;
-          }
         }
-        &::before{
+        &::before {
           content: "\2022";
           color: white;
           font-weight: bold;
-          font-size: 5px;
-          display: inline-block; 
+          font-size: 1rem;
+          display: inline-block;
           width: 1em;
           margin-left: -1em;
         }
@@ -166,7 +162,7 @@ li {
           display: block;
           transition: 0.3s;
           text-transform: uppercase;
-          font-family: $lato;    
+          font-family: $lato;
           &:hover {
             color: #dff5f3;
             text-decoration: none;
@@ -185,7 +181,28 @@ li {
       border: 2px solid $almostWhiteTransparant;
       padding: 10px;
       color: white !important;
+      background-color: $mainBlueColor;
       cursor: pointer;
+      -webkit-transition: all 200ms ease-in;
+      -webkit-transform: scale(1);
+      -ms-transition: all 200ms ease-in;
+      -ms-transform: scale(1);
+      -moz-transition: all 200ms ease-in;
+      -moz-transform: scale(1);
+      transition: all 200ms ease-in;
+      transform: scale(1);
+      z-index: 99;
+
+      &:hover {
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1.2);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1.2);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1.2);
+        transition: all 200ms ease-in;
+        transform: scale(1.2);
+      }
     }
 
     &-links {
@@ -286,6 +303,7 @@ li {
     &-center {
       & a {
         padding: 8px;
+        font-size: 1.4rem !important;
       }
     }
     &-footer {

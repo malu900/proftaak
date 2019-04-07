@@ -34,6 +34,8 @@ $(document).ready(function ($) {
   NavigationHover();
   NavigationToggle();
   CheckIfPresent();
+  ContactIconsHover();
+  // ZoomButtonHover();
 
   $('.progress-container').css({
     'visibility': 'hidden'
@@ -59,30 +61,67 @@ function NavigationToggle() {
   });
 }
 
-
-var $li = $('.nav-content-center ul li');
-var $firstli = $('.nav-content-center ul .first-li-item');
+$ul = $('.nav-content-center ul');
+$li = $('.nav-content-center ul li');
+$firstli = $('.nav-content-center ul .first-li-item');
 
 function NavigationHover() {
   //remove before element 
   //https://stackoverflow.com/questions/27270021/remove-content-from-before-element-css
   document.styleSheets[0].addRule('.first-li-item:before', 'display: none !important;');
 
-  // hover media query breakpoints 
-  if ($(window).width() >= 767.99) {
+  //hover media query breakpoints 
+  $(window).resize(function () {
+    if ($(window).width() >= 1024.99) {
+      $($li).not($firstli).hide();
+      $($firstli).on({
+        mouseenter: function (e) {
+          $(this).siblings().fadeIn(500);
+          e.StopPropagnation();
+        },
+      })
+      $($firstli).on({
+        mouseleave: function (e) {
+          $(this).siblings().fadeOut(100);
+          e.StopPropagnation();
+        },
+      })
+    }
+    if (($(window).width() > 767.99) && ($(window).width() < 1024.98)) {
+      $($li).show();
+    }
+    if ($(window).width() < 767.98) {
+      $($li).hide();
+      $($firstli).show();
+    }
+  });
 
-    $($firstli, $li).mouseenter(function () {
-      $($li).fadeIn(500);
-    });
-    $($firstli, $li).mouseleave(function () {
-      $($li).not($firstli).fadeOut(100);
-    });
-  } else if (($(window).width() >= 767.99) && ($(window).width() <= 1024)) {
-    $($li).show();
-  } else if ($(window).width() <= 767.98) {
-    $($li).hide();
-    $($firstli).show();
-  }
+  $(window).resize();
 }
 
+function ContactIconsHover() {
+  $icons = $('.nav-content-footer-links a');
 
+  $($icons).on({
+    mouseenter: function (e) {
+      $(this).effect("bounce", { times: 1 }, 500);
+    }
+  })
+}
+
+// function ZoomButtonHover() {
+//   $button = $('nav-content-footer-button');
+//   $($button).hover(function() {
+//     $(this).css("cursor", "pointer");
+//     $(this).toggle({
+//       effect: "scale",
+//       percent: "90%"
+//     },200);
+// }, function() {
+//      $(this).toggle({
+//        effect: "scale",
+//        percent: "80%"
+//      },200);
+
+// });
+// }
