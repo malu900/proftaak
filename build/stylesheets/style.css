@@ -1,7 +1,8 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Karla|Lato|Rubik");
 .nav-content-footer, .nav-content-header {
   width: 75%;
   margin: 0 auto;
-  padding: 40px 0px;
 }
 
 /****** Presets ******/
@@ -9,6 +10,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Rubik", sans-serif;
 }
 
 a {
@@ -33,14 +35,6 @@ li {
   height: 5px;
   width: 0%;
   background-color: #3597ee;
-}
-
-.viewHeight {
-  height: 2000px;
-}
-
-.tips-container {
-  height: 3000px;
 }
 
 /****** Navigation bars ******/
@@ -93,52 +87,173 @@ li {
   align-items: flex-start;
   justify-content: space-between;
 }
-.nav-content-header {
-  border-bottom: 1px solid rgba(244, 250, 255, 0.5);
+.nav-content .line {
+  height: 1px;
+  border-bottom: 2px solid rgba(244, 250, 255, 0.5);
 }
-.nav-content-header i {
-  font-size: 1.5rem;
+.nav-content-header {
+  padding: 70px 0 0 0;
+}
+.nav-content-header-container {
+  justify-content: space-between;
+}
+.nav-content-header-container .logo-header {
+  padding: 0;
+}
+.nav-content-header-container i {
+  font-size: 2.5rem;
   -webkit-text-stroke: 2px #3597ee;
-  float: right;
   color: white;
+  padding: 0 20px;
+  cursor: pointer;
 }
 .nav-content-center {
   align-self: center;
   width: 75%;
 }
-.nav-content-center a {
-  padding: 8px 8px 8px 32px;
+.nav-content-center ul {
+  margin: 0;
+  display: flex;
+}
+.nav-content-center ul li {
+  float: left;
+  display: flex;
+  align-items: center;
+  margin: 0 0.5rem;
+}
+.nav-content-center ul li .first-item {
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+.nav-content-center ul li .first-item::before {
+  display: none !important;
+  content: none !important;
+}
+.nav-content-center ul li::before {
+  content: "•";
+  color: white;
+  font-weight: bold;
+  font-size: 5px;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.nav-content-center ul li a {
+  align-items: center;
+  padding: 8px 8px 8px 0;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 1.1rem;
+  font-weight: lighter;
   color: #f4faff;
   display: block;
   transition: 0.3s;
-  font-size: 2.1rem;
-  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
 }
-.nav-content-center a:hover {
+.nav-content-center ul li a:hover {
   color: #dff5f3;
   text-decoration: none;
 }
 .nav-content-footer {
-  border-top: 1px solid rgba(244, 250, 255, 0.5);
+  padding: 0 0 70px 0;
+}
+.nav-content-footer-button {
+  text-align: center;
+  border: 2px solid rgba(244, 250, 255, 0.5);
+  padding: 10px;
+  color: white !important;
+  cursor: pointer;
 }
 .nav-content-footer-links {
   display: flex;
   justify-content: space-between;
+  padding: 10px;
+}
+.nav-content-footer-links p {
+  color: #f4faff;
 }
 .nav-content-footer-links a {
-  color: #f4faff !important;
+  cursor: pointer;
+}
+.nav-content-footer-links a i {
+  color: #f4faff;
 }
 
-/****** ******/
+/****** header ******/
+#homepage .blue-header {
+  height: 50vh;
+  background-color: #3597ee;
+}
+#homepage .blue-header .product {
+  position: relative;
+}
+#homepage .blue-header .product-img {
+  position: absolute;
+  top: 25vh;
+}
+#homepage .blue-header .product-img embed {
+  width: 100%;
+}
+#homepage .blue-header .product-text {
+  color: white;
+  font-size: 1rem;
+}
+#homepage .blue-header .product-text h3 {
+  font-weight: 600;
+}
+#homepage .blue-header .product-text p {
+  font-family: "Lato", sans-serif;
+  font-weight: lighter;
+}
+
+/****** Tablet ******/
+@media (min-width: 767.99px) and (max-width: 1024px) {
+  /****** header ******/
+  #homepage .blue-header .product-img {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+/****** Mobile ******/
+@media screen and (max-width: 767.98px) {
+  /****** header ******/
+  #homepage .blue-header {
+    height: 60vh;
+  }
+  #homepage .blue-header .product-text {
+    margin-top: 80px !important;
+  }
+  #homepage .blue-header .product-text h3 {
+    font-size: 1.2rem;
+  }
+  #homepage .blue-header .product-text p {
+    font-size: 0.9rem;
+  }
+  #homepage .blue-header .product-img {
+    top: 270px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav-content-header {
+    padding: 50px 0 0 0;
+  }
+  .nav-content-header i {
+    font-size: 2rem;
+  }
+  .nav-content-center a {
+    padding: 8px;
+  }
+  .nav-content-footer {
+    padding: 0 0 50px 0;
+  }
+}
 @media screen and (max-height: 450px) {
   /****** Navigation ******/
   .nav-content {
     padding-top: 15px;
-  }
-  .nav-content a {
-    font-size: 18px;
   }
 }
 

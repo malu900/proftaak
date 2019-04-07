@@ -1,10 +1,20 @@
+//fonts
+@import url("https://fonts.googleapis.com/css?family=Karla|Lato|Rubik");
+
+$rubik: "Rubik", sans-serif;
+$karla: "Karla", sans-serif;
+// lato because google fonts doesnt have karla 'lighter' font
+$lato: "Lato", sans-serif;
+
+// Colors
 $almostWhite: rgb(244, 250, 255);
 $almostWhiteTransparant: rgba(244, 250, 255, 0.5);
 $mainBlueColor: #3597ee;
+
+//
 %centerDiv {
   width: 75%;
   margin: 0 auto;
-  padding: 40px 0px;
 }
 
 /****** Presets ******/
@@ -12,6 +22,7 @@ $mainBlueColor: #3597ee;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: $rubik;
 }
 a {
   text-decoration: none;
@@ -36,13 +47,7 @@ li {
     background-color: $mainBlueColor;
   }
 }
-.viewHeight {
-  height: 2000px;
-}
 
-.tips-container{
-  height: 3000px;
-}
 /****** Navigation bars ******/
 #nav-bars {
   padding: 15px;
@@ -96,15 +101,26 @@ li {
   align-items: flex-start;
   justify-content: space-between;
 
+  .line {
+    height: 1px;
+    border-bottom: 2px solid $almostWhiteTransparant;
+  }
+
   &-header {
     @extend %centerDiv;
-    border-bottom: 1px solid $almostWhiteTransparant;
-
-    & i {
-      font-size: 1.5rem;
-      -webkit-text-stroke: 2px $mainBlueColor;
-      float: right;
-      color: white;
+    padding: 70px 0 0 0;
+    &-container {
+      justify-content: space-between;
+      .logo-header {
+        padding: 0;
+      }
+      & i {
+        font-size: 2.5rem;
+        -webkit-text-stroke: 2px $mainBlueColor;
+        color: white;
+        padding: 0 20px;
+        cursor: pointer;
+      }
     }
   }
 
@@ -112,46 +128,174 @@ li {
     align-self: center;
     width: 75%;
 
-    a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #f4faff;
-      display: block;
-      transition: 0.3s;
-      font-size: 2.1rem;
-      font-weight: 700;
+    ul{
+      margin: 0;
+      display: flex;  
+      li{
+        // display: none;
+        float: left;
+        display: flex;
+        align-items: center;
+        margin: 0 0.5rem;
 
-      &:hover {
-        color: #dff5f3;
-        text-decoration: none;
+        .first-item{
+          font-size: 1.9rem;
+          font-weight: 700;
+
+          &::before{
+            display: none!important;
+            content: none!important;
+          }
+        }
+        &::before{
+          content: "\2022";
+          color: white;
+          font-weight: bold;
+          font-size: 5px;
+          display: inline-block; 
+          width: 1em;
+          margin-left: -1em;
+        }
+        a {
+          align-items: center;
+          padding: 8px 8px 8px 0;
+          text-decoration: none;
+          font-size: 1.1rem;
+          font-weight: lighter;
+          color: #f4faff;
+          display: block;
+          transition: 0.3s;
+          text-transform: uppercase;
+          font-family: $lato;    
+          &:hover {
+            color: #dff5f3;
+            text-decoration: none;
+          }
+        }
       }
     }
   }
 
   &-footer {
     @extend %centerDiv;
-    border-top: 1px solid $almostWhiteTransparant;
+    padding: 0 0 70px 0;
+
+    &-button {
+      text-align: center;
+      border: 2px solid $almostWhiteTransparant;
+      padding: 10px;
+      color: white !important;
+      cursor: pointer;
+    }
 
     &-links {
       display: flex;
       justify-content: space-between;
+      padding: 10px;
 
+      & p {
+        color: $almostWhite;
+      }
       & a {
-        color: $almostWhite !important;
+        cursor: pointer;
+        & i {
+          color: $almostWhite;
+        }
       }
     }
   }
 }
 
-/****** ******/
+/****** header ******/
+#homepage {
+  .blue-header {
+    height: 50vh;
+    background-color: $mainBlueColor;
 
+    .product {
+      position: relative;
+      &-img {
+        position: absolute;
+        top: 25vh;
+        embed {
+          width: 100%;
+        }
+      }
+      &-text {
+        color: white;
+        font-size: 1rem;
+        h3 {
+          font-weight: 600;
+        }
+        p {
+          font-family: $lato;
+          font-weight: lighter;
+        }
+      }
+    }
+  }
+}
+
+/****** Tablet ******/
+@media (min-width: 767.99px) and (max-width: 1024px) {
+  /****** header ******/
+  #homepage {
+    .blue-header {
+      .product {
+        &-img {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}
+/****** Mobile ******/
+@media screen and (max-width: 767.98px) {
+  /****** header ******/
+  #homepage {
+    .blue-header {
+      height: 60vh;
+      .product {
+        &-text {
+          margin-top: 80px !important;
+          h3 {
+            font-size: 1.2rem;
+          }
+          p {
+            font-size: 0.9rem;
+          }
+        }
+        &-img {
+          top: 270px;
+          left: 0;
+          right: 0;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+  .nav-content {
+    &-header {
+      padding: 50px 0 0 0;
+      & i {
+        font-size: 2rem;
+      }
+    }
+    &-center {
+      & a {
+        padding: 8px;
+      }
+    }
+    &-footer {
+      padding: 0 0 50px 0;
+    }
+  }
+}
 @media screen and (max-height: 450px) {
   /****** Navigation ******/
   .nav-content {
     padding-top: 15px;
-    a {
-      font-size: 18px;
-    }
   }
 }
