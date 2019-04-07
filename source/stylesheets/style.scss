@@ -10,6 +10,7 @@ $lato: "Lato", sans-serif;
 $almostWhite: rgb(244, 250, 255);
 $almostWhiteTransparant: rgba(244, 250, 255, 0.5);
 $mainBlueColor: #3597ee;
+$greyColor: #636363;
 
 //
 %centerDiv {
@@ -18,6 +19,10 @@ $mainBlueColor: #3597ee;
 }
 
 /****** Presets ******/
+.hide-scrollbar ::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -43,7 +48,7 @@ li {
 
   .progress-bar {
     height: 5px;
-    width: 0%;
+    width: 100%;
     background-color: $mainBlueColor;
   }
 }
@@ -257,14 +262,40 @@ footer {
   background-color: $mainBlueColor;
   color: white;
 
-
-  & .text-container{
-    padding: 30px; 
-    &-box{
-      & h5{
+  & .text-container {
+    padding: 30px;
+    &-box {
+      & h5 {
         text-transform: uppercase;
       }
-      
+    }
+  }
+  & .contact-links {
+    justify-content: space-around;
+    &-con {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      & i{
+        font-size: 1.4rem;
+      }
+      & p{
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-family: $lato!important;
+        font-weight: lighter;
+        margin: 0;
+      }
+      & a{
+        font-size: 0.6rem;
+        text-transform: uppercase;
+        font-family: $lato!important;
+
+        & span{ 
+          display: block;
+        }
+      }
     }
   }
 
@@ -272,19 +303,37 @@ footer {
     width: 100%;
     height: 200px;
 
-    .mapboxgl-ctrl-bottom-left{
-      display: none!important;
+    .mapboxgl-ctrl-bottom-left {
+      display: none !important;
     }
-    .mapboxgl-ctrl-bottom-right{
-      display: none!important;
+    .mapboxgl-ctrl-bottom-right {
+      display: none !important;
     }
   }
 }
 
 /****** Tips ******/
 
-.tips-header{
+.tips-header {
   height: 40vh;
+  display: flex; 
+  text-align: center;
+
+  &-center{
+    margin: 0 auto;
+
+    & h5{
+      text-transform: uppercase;
+      font-size: 1.9rem;
+      color: $greyColor;
+    }
+    & i{
+      font-size: 4rem;
+      color: $greyColor;
+      -webkit-text-stroke: 4px white;
+      position: absolute!important;
+    }
+  }
 }
 
 /****** Tablet ******/
@@ -344,6 +393,18 @@ footer {
       padding: 0 0 50px 0;
     }
   }
+  .tips-header {
+  
+    &-center{
+      padding-top: 100px;
+  
+      & h5{
+        text-transform: uppercase;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
 }
 @media screen and (max-height: 450px) {
   /****** Navigation ******/

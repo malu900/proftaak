@@ -6,6 +6,12 @@
 }
 
 /****** Presets ******/
+.hide-scrollbar ::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+  /* make scrollbar transparent */
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,7 +39,7 @@ li {
 }
 .header .progress-bar {
   height: 5px;
-  width: 0%;
+  width: 100%;
   background-color: #3597ee;
 }
 
@@ -234,6 +240,32 @@ footer .text-container {
 footer .text-container-box h5 {
   text-transform: uppercase;
 }
+footer .contact-links {
+  justify-content: space-around;
+}
+footer .contact-links-con {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+footer .contact-links-con i {
+  font-size: 1.4rem;
+}
+footer .contact-links-con p {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif !important;
+  font-weight: lighter;
+  margin: 0;
+}
+footer .contact-links-con a {
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif !important;
+}
+footer .contact-links-con a span {
+  display: block;
+}
 footer #map {
   width: 100%;
   height: 200px;
@@ -248,6 +280,22 @@ footer #map .mapboxgl-ctrl-bottom-right {
 /****** Tips ******/
 .tips-header {
   height: 40vh;
+  display: flex;
+  text-align: center;
+}
+.tips-header-center {
+  margin: 0 auto;
+}
+.tips-header-center h5 {
+  text-transform: uppercase;
+  font-size: 1.9rem;
+  color: #636363;
+}
+.tips-header-center i {
+  font-size: 4rem;
+  color: #636363;
+  -webkit-text-stroke: 4px white;
+  position: absolute !important;
 }
 
 /****** Tablet ******/
@@ -293,6 +341,14 @@ footer #map .mapboxgl-ctrl-bottom-right {
   }
   .nav-content-footer {
     padding: 0 0 50px 0;
+  }
+
+  .tips-header-center {
+    padding-top: 100px;
+  }
+  .tips-header-center h5 {
+    text-transform: uppercase;
+    font-size: 1.2rem;
   }
 }
 @media screen and (max-height: 450px) {

@@ -3,11 +3,12 @@ window.onscroll = function () { myFunction() };
 
 function myFunction() {
   var elDiv = document.getElementById("tips");
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop - elDiv.offsetTop;
+  var winScroll =  document.documentElement.scrollTop - elDiv.offsetTop;
   var height = document.getElementById("tips").scrollHeight - document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
+
 
 $(document).scroll(function () {
   var documentHeight = $(this).scrollTop();
@@ -37,6 +38,7 @@ $(document).ready(function ($) {
   ContactIconsHover();
   MapBox();
   FooterHeight();
+  BounceIcon();
 
   $('.progress-container').css({
     'visibility': 'hidden'
@@ -44,9 +46,11 @@ $(document).ready(function ($) {
 
 });
 
+
 function CheckIfPresent() {
   if ($("#homepage").length > 0) {
     $('.hamburger div').css({ 'background-color': 'white' });
+    $('html').addClass('hide-scrollbar');
   }
 }
 
@@ -108,6 +112,13 @@ function ContactIconsHover() {
       $(this).effect("bounce", { times: 1 }, 500);
     }
   })
+}
+
+function BounceIcon(){
+  $headerIcon = $('.tips-header i');
+    setInterval(function(){
+      $($headerIcon).effect("bounce", {times: 4}, 500)
+    }, 5000);  
 }
 //https://www.w3schools.com/graphics/google_maps_intro.asp
 function MapBox() {
