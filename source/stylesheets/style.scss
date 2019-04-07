@@ -226,14 +226,14 @@ li {
 /****** header ******/
 #homepage {
   .blue-header {
-    height: 50vh;
+    height: 60vh;
     background-color: $mainBlueColor;
 
     .product {
       position: relative;
       &-img {
         position: absolute;
-        top: 25vh;
+        top: 30vh;
         embed {
           width: 100%;
         }
@@ -251,6 +251,40 @@ li {
       }
     }
   }
+}
+/****** Footer ******/
+footer {
+  background-color: $mainBlueColor;
+  color: white;
+
+
+  & .text-container{
+    padding: 30px; 
+    &-box{
+      & h5{
+        text-transform: uppercase;
+      }
+      
+    }
+  }
+
+  & #map {
+    width: 100%;
+    height: 200px;
+
+    .mapboxgl-ctrl-bottom-left{
+      display: none!important;
+    }
+    .mapboxgl-ctrl-bottom-right{
+      display: none!important;
+    }
+  }
+}
+
+/****** Tips ******/
+
+.tips-container{
+  height: 40vh;
 }
 
 /****** Tablet ******/

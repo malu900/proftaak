@@ -35,7 +35,8 @@ $(document).ready(function ($) {
   NavigationToggle();
   CheckIfPresent();
   ContactIconsHover();
-  // ZoomButtonHover();
+  MapBox();
+  FooterHeight();
 
   $('.progress-container').css({
     'visibility': 'hidden'
@@ -108,20 +109,21 @@ function ContactIconsHover() {
     }
   })
 }
+//https://www.w3schools.com/graphics/google_maps_intro.asp
+function MapBox() {
+  mapboxgl.accessToken = 'pk.eyJ1IjoibWFsdTkwMCIsImEiOiJjanR5amZtdTEwaTMzNDNtaGpmdmkzMmhnIn0.-PicZ5332e2dxzGoPtTjog';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/light-v9',
+    center: [5.4820865, 51.4522206],
+    zoom: 12
+  });
 
-// function ZoomButtonHover() {
-//   $button = $('nav-content-footer-button');
-//   $($button).hover(function() {
-//     $(this).css("cursor", "pointer");
-//     $(this).toggle({
-//       effect: "scale",
-//       percent: "90%"
-//     },200);
-// }, function() {
-//      $(this).toggle({
-//        effect: "scale",
-//        percent: "80%"
-//      },200);
+}
 
-// });
-// }
+function FooterHeight(){
+  $(window).resize(function() {
+    $('footer').css({'height': $('footer').height()});
+  });
+  $(window).resize();
+}

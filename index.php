@@ -42,7 +42,12 @@
         </div>
       </div>
     </div>
+    <div class="tips-container"> 
+      
+    </div>     
+
   </div>
+  <?php include('footer.php') ?>
 
   <?php include("javascript_include.html"); ?>
 </body>
