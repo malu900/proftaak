@@ -246,7 +246,7 @@ footer #map .mapboxgl-ctrl-bottom-right {
 }
 
 /****** Tips ******/
-.tips-container {
+.tips-header {
   height: 40vh;
 }
 

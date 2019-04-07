@@ -42,10 +42,12 @@
         </div>
       </div>
     </div>
-    <div class="tips-container"> 
-      
-    </div>     
+    <div class="tips-header"> 
 
+    </div>     
+    <div id="tips"> 
+
+    </div>
   </div>
   <?php include('footer.php') ?>
 

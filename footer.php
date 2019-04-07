@@ -5,9 +5,9 @@
             <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                 Aenean commodo ligula eget dolor. </p>
         </div>
-        <div class="contact-links">
+        <div class="contact-links row">
             <div class="contact-links-one">
-                <i> </>
+               
             </div>
         </div>
     </div>
