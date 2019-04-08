@@ -18,6 +18,10 @@
   padding: 1rem 0 2rem 0;
 }
 
+body {
+  color: #707070;
+}
+
 /****** Presets ******/
 .hide-scrollbar ::-webkit-scrollbar {
   width: 0px;
@@ -452,6 +456,48 @@ footer #map .mapboxgl-ctrl-bottom-right {
   font-size: 1.7rem;
 }
 
+.about-page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 2rem;
+}
+.about-page-header h5 {
+  text-transform: uppercase;
+  color: #3597ee;
+  font-family: 1.7rem;
+}
+.about-page-header p {
+  font-family: "Karla", sans-serif;
+}
+.about-page .card-feature {
+  justify-content: space-between;
+}
+.about-page .card-feature-container {
+  box-sizing: content-box !important;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.01);
+}
+.about-page .card-feature-container img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.about-page .card-feature-container-text {
+  text-align: center;
+}
+.about-page .card-feature-container-text h5 {
+  margin: 5px;
+}
+.about-page .card-feature-container-text p {
+  margin: 0;
+}
+
 @media (min-width: 1024px) and (max-width: 1199.99px) {
   .product-page-plan .card-container {
     flex-wrap: wrap;
@@ -538,6 +584,9 @@ footer #map .mapboxgl-ctrl-bottom-right {
     font-size: 1.2rem;
   }
 
+  .tips-container {
+    flex-wrap: wrap;
+  }
   .tips-container-container {
     flex-wrap: wrap;
   }
@@ -564,6 +613,14 @@ footer #map .mapboxgl-ctrl-bottom-right {
   }
   .product-page-plan .feature-container-card-img {
     margin: 0 auto;
+  }
+
+  .about-page .card-feature {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .about-page .card-feature-container {
+    padding: 15px;
   }
 }
 @media screen and (max-height: 450px) {

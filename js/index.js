@@ -40,6 +40,7 @@ function CheckIfPresent() {
   if ($("#homepage").length > 0) {
     $('.hamburger div').css({ 'background-color': 'white' });
     $('html').addClass('hide-scrollbar');
+    $('body').css({ 'overflow-x': ' hidden'});
   }
 }
 
