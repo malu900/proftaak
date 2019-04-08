@@ -17,11 +17,7 @@ $greyColor: #636363;
   width: 75%;
   margin: 0 auto;
 }
-.animation-element-left {
-	opacity:0;
-	margin-left:-300px;	
-	max-width:100%;
-}
+
 /****** Presets ******/
 .hide-scrollbar ::-webkit-scrollbar {
   width: 0px;
@@ -281,22 +277,22 @@ footer {
       flex-direction: column;
       text-align: center;
 
-      & i{
+      & i {
         font-size: 1.4rem;
       }
-      & p{
+      & p {
         font-size: 0.8rem;
         text-transform: uppercase;
-        font-family: $lato!important;
+        font-family: $lato !important;
         font-weight: lighter;
         margin: 0;
       }
-      & a{
+      & a {
         font-size: 0.6rem;
         text-transform: uppercase;
-        font-family: $lato!important;
+        font-family: $lato !important;
 
-        & span{ 
+        & span {
           display: block;
         }
       }
@@ -320,23 +316,32 @@ footer {
 
 .tips-header {
   height: 40vh;
-  display: flex; 
+  display: flex;
   text-align: center;
 
-  &-center{
+  &-center {
     margin: 0 auto;
 
-    & h5{
+    & h5 {
       text-transform: uppercase;
       font-size: 1.9rem;
       color: $greyColor;
     }
-    & i{
+    & i {
       font-size: 4rem;
       color: $greyColor;
       -webkit-text-stroke: 4px white;
-      position: absolute!important;
+      position: absolute !important;
     }
+  }
+}
+
+.tips-container {
+  text-align:center;
+  &-animation-left {
+    opacity: 0;
+    margin-left: -300px;
+    max-width: 100%;
   }
 }
 
@@ -398,17 +403,15 @@ footer {
     }
   }
   .tips-header {
-  
-    &-center{
+    &-center {
       padding-top: 100px;
-  
-      & h5{
+
+      & h5 {
         text-transform: uppercase;
         font-size: 1.2rem;
       }
     }
   }
-
 }
 @media screen and (max-height: 450px) {
   /****** Navigation ******/

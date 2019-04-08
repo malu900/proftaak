@@ -5,12 +5,6 @@
   margin: 0 auto;
 }
 
-.animation-element-left {
-  opacity: 0;
-  margin-left: -300px;
-  max-width: 100%;
-}
-
 /****** Presets ******/
 .hide-scrollbar ::-webkit-scrollbar {
   width: 0px;
@@ -302,6 +296,15 @@ footer #map .mapboxgl-ctrl-bottom-right {
   color: #636363;
   -webkit-text-stroke: 4px white;
   position: absolute !important;
+}
+
+.tips-container {
+  text-align: center;
+}
+.tips-container-animation-left {
+  opacity: 0;
+  margin-left: -300px;
+  max-width: 100%;
 }
 
 /****** Tablet ******/

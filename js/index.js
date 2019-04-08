@@ -1,3 +1,4 @@
+// jQuery & w3schools & jQuery UI & Javascript  documentation
 // // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_indicator
 window.onscroll = function () { myFunction() };
 
@@ -41,21 +42,19 @@ function CheckIfPresent() {
 
 function NavigationToggle() {
   $(".nav-content").hide();
-
   $('#nav-bars').click(function () {
     $(".nav-content").toggle('slide', { direction: 'left' });
   });
-
   $('.closing-icon').click(function () {
     $(".nav-content").toggle('slide', { direction: 'right' });
   });
 }
 
-$ul = $('.nav-content-center ul');
-$li = $('.nav-content-center ul li');
-$firstli = $('.nav-content-center ul .first-li-item');
 
 function NavigationHover() {
+  $ul = $('.nav-content-center ul');
+$li = $('.nav-content-center ul li');
+$firstli = $('.nav-content-center ul .first-li-item');
   //remove before element 
   //https://stackoverflow.com/questions/27270021/remove-content-from-before-element-css
   document.styleSheets[0].addRule('.first-li-item:before', 'display: none !important;');
@@ -114,7 +113,6 @@ function MapBox() {
     center: [5.4820865, 51.4522206],
     zoom: 12
   });
-
 }
 
 function FooterHeight(){
@@ -126,13 +124,13 @@ function FooterHeight(){
 
 
 function AnimateLeftTips(){
-  $('.animation-element-left').each( function(){
+  $('.tips-container-animation-left').each( function(){
       
     var bottom_of_element = $(this).offset().top + $(this).outerHeight();
     var bottom_of_window = $(window).scrollTop() + $(window).height();
     
     if( bottom_of_window > bottom_of_element ){
-      $(this).animate({'opacity':'1','margin-left':'0px'},1000);
+      $(this).animate({'opacity':'1','margin-left':'0' },1000);
     }
     
 }); 
