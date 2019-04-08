@@ -5,6 +5,12 @@
   margin: 0 auto;
 }
 
+.animation-element-left {
+  opacity: 0;
+  margin-left: -300px;
+  max-width: 100%;
+}
+
 /****** Presets ******/
 .hide-scrollbar ::-webkit-scrollbar {
   width: 0px;

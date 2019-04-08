@@ -47,8 +47,7 @@
       <a href="#tips"> <i class="fas fa-angle-down"></i></a>
     </div>
   </div>
-  <div id="tips">
-  </div>
+<?php include('tips.php'); ?>
 </div>
 <?php include('footer.php') ?>
 

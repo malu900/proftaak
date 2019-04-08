@@ -11,24 +11,9 @@ function myFunction() {
 
 
 $(document).scroll(function () {
-  var documentHeight = $(this).scrollTop();
-  var elementHeight = $('#tips').offset().top;
-  var distance = (elementHeight - documentHeight)
-  if (documentHeight > distance + 50) {
-    $('.progress-container').css({
-      'visibility': 'visible',
-      'opacity': '1',
-      'transition': 'visibility 0s linear 300ms, opacity 300ms'
-    });
-  } else {
-    $('.progress-container').css({
-      'visibility': 'hidden',
-      'opactiy': 0,
-      'transition': 'visibility 0s linear 300ms, opacity 300ms'
-    });
-  }
+  ScrollIndicatorVisibility();
+  AnimateLeftTips();
 });
-
 
 $(document).ready(function ($) {
 
@@ -139,6 +124,35 @@ function FooterHeight(){
   $(window).resize();
 }
 
-var parent = document.getElementById('container1');
-var child = document.getElementById('container2');
-child.style.paddingRight = child.offsetWidth - child.clientWidth + "px";
+
+function AnimateLeftTips(){
+  $('.animation-element-left').each( function(){
+      
+    var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+    var bottom_of_window = $(window).scrollTop() + $(window).height();
+    
+    if( bottom_of_window > bottom_of_element ){
+      $(this).animate({'opacity':'1','margin-left':'0px'},1000);
+    }
+    
+}); 
+}
+
+function ScrollIndicatorVisibility(){
+  var documentHeight = $(this).scrollTop();
+  var elementHeight = $('#tips').offset().top;
+  var distance = (elementHeight - documentHeight)
+  if (documentHeight > distance ) {
+    $('.progress-container').css({
+      'visibility': 'visible',
+      'opacity': '1',
+      'transition': 'visibility 0s linear 300ms, opacity 300ms'
+    });
+  } else {
+    $('.progress-container').css({
+      'visibility': 'hidden',
+      'opactiy': 0,
+      'transition': 'visibility 0s linear 300ms, opacity 300ms'
+    });
+  }
+}
