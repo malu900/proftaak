@@ -47,9 +47,6 @@
       <a href="#tips"> <i class="fas fa-angle-down"></i></a>
     </div>
   </div>
-  <div class="col-6 col-md-3">
-            <img src="../img/Tip1.jpg"/>
-        </div>
 <?php include('tips.php'); ?>
 </div>
 <?php include('footer.php') ?>

@@ -14,6 +14,7 @@ function myFunction() {
 $(document).scroll(function () {
   ScrollIndicatorVisibility();
   AnimateLeftTips();
+  AnimateRightTips();
 });
 
 $(document).ready(function ($) {
@@ -130,7 +131,20 @@ function AnimateLeftTips(){
     var bottom_of_window = $(window).scrollTop() + $(window).height();
     
     if( bottom_of_window > bottom_of_element ){
-      $(this).animate({'opacity':'1','margin-left':'0' },1000);
+      $(this).animate({'opacity':'1','margin-left':'0' },2000);
+    }
+    
+}); 
+}
+
+function AnimateRightTips(){
+  $('.tips-container-animation-right').each( function(){
+      
+    var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+    var bottom_of_window = $(window).scrollTop() + $(window).height();
+    
+    if( bottom_of_window > bottom_of_element ){
+      $(this).animate({'opacity':'1','margin-left':'0' },2000);
     }
     
 }); 

@@ -301,10 +301,52 @@ footer #map .mapboxgl-ctrl-bottom-right {
 .tips-container {
   text-align: center;
 }
+.tips-container-container {
+  display: flex;
+}
+.tips-container .line {
+  height: 3px;
+  width: 70%;
+  background-color: #3597ee;
+}
+.tips-container img {
+  width: 60%;
+  height: auto;
+  object-fit: contain;
+}
 .tips-container-animation-left {
   opacity: 0;
   margin-left: -300px;
-  max-width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left !important;
+}
+.tips-container-animation-left-title {
+  font-weight: 900;
+  display: block !important;
+  text-transform: uppercase;
+}
+.tips-container-animation-left .line {
+  margin-right: auto !important;
+}
+.tips-container-animation-right {
+  opacity: 0;
+  text-align: right !important;
+  margin-left: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.tips-container-animation-right-title {
+  font-weight: 900;
+  display: block !important;
+  text-transform: uppercase;
+}
+.tips-container-animation-right .line {
+  margin-left: auto !important;
 }
 
 /****** Tablet ******/
