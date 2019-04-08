@@ -10,14 +10,26 @@ $lato: "Lato", sans-serif;
 $almostWhite: rgb(244, 250, 255);
 $almostWhiteTransparant: rgba(244, 250, 255, 0.5);
 $mainBlueColor: #3597ee;
+$mainBlueColorTransparant: rgba(53, 151, 238, 0.5);
 $greyColor: #636363;
+$transparant: transparent !important;
 
 //
 %centerDiv {
   width: 75%;
   margin: 0 auto;
 }
-
+%buttonStyle {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  color: white !important;
+  cursor: pointer;
+}
+%cards {
+  flex: 1 1 auto;
+  padding: 1rem 0 2rem 0;
+}
 /****** Presets ******/
 .hide-scrollbar ::-webkit-scrollbar {
   width: 0px;
@@ -182,29 +194,14 @@ li {
     padding: 0 0 70px 0;
 
     &-button {
-      text-align: center;
+      @extend %buttonStyle;
       border: 2px solid $almostWhiteTransparant;
-      padding: 10px;
-      color: white !important;
       background-color: $mainBlueColor;
-      cursor: pointer;
-      -webkit-transition: all 200ms ease-in;
-      -webkit-transform: scale(1);
-      -ms-transition: all 200ms ease-in;
-      -ms-transform: scale(1);
-      -moz-transition: all 200ms ease-in;
-      -moz-transform: scale(1);
       transition: all 200ms ease-in;
       transform: scale(1);
       z-index: 99;
 
       &:hover {
-        -webkit-transition: all 200ms ease-in;
-        -webkit-transform: scale(1.2);
-        -ms-transition: all 200ms ease-in;
-        -ms-transform: scale(1.2);
-        -moz-transition: all 200ms ease-in;
-        -moz-transform: scale(1.2);
         transition: all 200ms ease-in;
         transform: scale(1.2);
       }
@@ -220,6 +217,7 @@ li {
       }
       & a {
         cursor: pointer;
+        text-transform: uppercase;
         & i {
           color: $almostWhite;
         }
@@ -261,6 +259,7 @@ li {
 footer {
   background-color: $mainBlueColor;
   color: white;
+  margin: 50px 0 0 0;
 
   & .text-container {
     padding: 30px;
@@ -338,6 +337,7 @@ footer {
 
 .tips-container {
   text-align: center;
+  margin-bottom: 50px;
 
   &-container {
     display: flex;
@@ -360,8 +360,11 @@ footer {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    text-align: left!important;
+    text-align: left !important;
 
+    & p {
+      font-family: $karla;
+    }
     &-title {
       font-weight: 900;
       display: block !important;
@@ -391,6 +394,150 @@ footer {
   }
 }
 
+/****** Product page ******/
+
+.product-page {
+  &-plan {
+    &-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 2rem;
+
+      & h5 {
+        text-transform: uppercase;
+        color: $mainBlueColor;
+        font-family: 1.7rem;
+      }
+      & p {
+        font-family: $karla;
+      }
+    }
+    .card-container {
+      justify-content: space-around;
+      align-items: flex-start;
+
+      .cardd {
+        background-color: $transparant;
+        width: 330px;
+        text-align: center;
+        justify-content: space-around;
+        padding: 0;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+        &:hover {
+          box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+        }
+
+        &.active {
+          background-color: $mainBlueColor !important;
+          box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+          .cardd-headerr {
+            & h5 {
+              color: white !important;
+            }
+            & p {
+              color: white;
+            }
+          }
+
+          .cardd-body {
+            & p {
+              color: white;
+            }
+          }
+          .cardd-footerr {
+            &-button {
+              border: 2px solid $almostWhiteTransparant !important;
+              color: white !important;
+              padding: 0.5rem 5rem;
+              // color: $mainBlueColor;
+              // transition: ease-in-out 3s;
+            }
+          }
+        }
+
+        &-headerr {
+          @extend %cards;
+          background-color: $transparant;
+          padding: 2rem !important;
+
+          & h5 {
+            color: $mainBlueColor;
+            font-size: 1.4rem;
+          }
+          & p {
+            color: $mainBlueColor;
+          }
+        }
+        &-body {
+          background-color: $transparant;
+          @extend %cards;
+
+          &-text {
+            color: $mainBlueColor;
+            font-size: 2.5rem;
+            & span {
+              font-size: 1rem;
+            }
+          }
+        }
+        &-footerr {
+          @extend %cards;
+          background-color: $transparant;
+          text-align: center;
+          &-button {
+            background-color: $transparant;
+            border: 2px solid $mainBlueColorTransparant;
+            padding: 0.5rem 5rem;
+            color: $mainBlueColor;
+            cursor: pointer;
+
+            &:hover {
+              color: $mainBlueColor !important;
+            }
+          }
+        }
+      }
+    }
+    .feature-container {
+      justify-content: space-between;
+
+      &-card {
+        margin: 2rem 0;
+        box-sizing: content-box;
+        padding: 1rem 2.3rem;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        &-text {
+          & h5 {
+            color: $mainBlueColor;
+            font-size: 1.7rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1024px) and (max-width: 1199.99px) {
+  .product-page {
+    &-plan {
+      .card-container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        .cardd {
+          margin: 0 auto;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
 /****** Tablet ******/
 @media (min-width: 767.99px) and (max-width: 1024px) {
   /****** header ******/
@@ -404,7 +551,34 @@ footer {
       }
     }
   }
+  .product-page {
+    &-plan {
+      .card-container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        .cardd {
+          margin: 0 auto;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  .feature-container {
+    justify-content: space-around;
+
+    &-card {
+      margin: 2rem 0;
+      box-sizing: border-box;
+      padding: 1rem !important;
+
+      &-img {
+        margin: 0 auto;
+      }
+    }
+  }
 }
+
 /****** Mobile ******/
 @media screen and (max-width: 767.98px) {
   /****** header ******/
@@ -455,6 +629,42 @@ footer {
       & h5 {
         text-transform: uppercase;
         font-size: 1.2rem;
+      }
+    }
+  }
+
+  .tips-container {
+    &-container {
+      flex-wrap: wrap;
+
+      & div {
+        margin: 15px 0;
+      }
+    }
+  }
+  .product-page {
+    &-plan {
+      .card-container {
+        flex-wrap: wrap;
+        flex-direction: column;
+        .cardd {
+          margin: 0 auto;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+      }
+      .feature-container {
+        justify-content: space-around;
+
+        &-card {
+          margin: 2rem 0;
+          box-sizing: border-box;
+          padding: 1rem !important;
+
+          &-img {
+            margin: 0 auto;
+          }
+        }
       }
     }
   }

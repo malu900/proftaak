@@ -35,13 +35,13 @@
             Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
             Nulla consequat massa quis enim.</p>
         </div>
-        <div class="product-img col-8 col-md-3 col-lg-4 offset-md-2 offset-lg-1">
-          <embed src="logo.svg" />
+        <div class="product-img col-10 col-md-5 col-lg-4 offset-md-1 offset-lg-1">
+          <img src="img/mat-new.png" class="img-fluid" />
         </div>
       </div>
     </div>
   </div>
-  <div class="tips-header col-12  col-lg-5 offset-lg-6">
+  <div class="tips-header col-12 col-md-10  col-lg-5 offset-md-1 offset-lg-6">
     <div class="tips-header-center my-auto">
       <h5> Tips voor een betere nachtrust </h5>
       <a href="#tips"> <i class="fas fa-angle-down"></i></a>

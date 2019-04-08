@@ -5,6 +5,19 @@
   margin: 0 auto;
 }
 
+.nav-content-footer-button {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  color: white !important;
+  cursor: pointer;
+}
+
+.product-page-plan .card-container .cardd-footerr, .product-page-plan .card-container .cardd-body, .product-page-plan .card-container .cardd-headerr {
+  flex: 1 1 auto;
+  padding: 1rem 0 2rem 0;
+}
+
 /****** Presets ******/
 .hide-scrollbar ::-webkit-scrollbar {
   width: 0px;
@@ -161,29 +174,13 @@ li {
   padding: 0 0 70px 0;
 }
 .nav-content-footer-button {
-  text-align: center;
   border: 2px solid rgba(244, 250, 255, 0.5);
-  padding: 10px;
-  color: white !important;
   background-color: #3597ee;
-  cursor: pointer;
-  -webkit-transition: all 200ms ease-in;
-  -webkit-transform: scale(1);
-  -ms-transition: all 200ms ease-in;
-  -ms-transform: scale(1);
-  -moz-transition: all 200ms ease-in;
-  -moz-transform: scale(1);
   transition: all 200ms ease-in;
   transform: scale(1);
   z-index: 99;
 }
 .nav-content-footer-button:hover {
-  -webkit-transition: all 200ms ease-in;
-  -webkit-transform: scale(1.2);
-  -ms-transition: all 200ms ease-in;
-  -ms-transform: scale(1.2);
-  -moz-transition: all 200ms ease-in;
-  -moz-transform: scale(1.2);
   transition: all 200ms ease-in;
   transform: scale(1.2);
 }
@@ -197,6 +194,7 @@ li {
 }
 .nav-content-footer-links a {
   cursor: pointer;
+  text-transform: uppercase;
 }
 .nav-content-footer-links a i {
   color: #f4faff;
@@ -233,6 +231,7 @@ li {
 footer {
   background-color: #3597ee;
   color: white;
+  margin: 50px 0 0 0;
 }
 footer .text-container {
   padding: 30px;
@@ -300,6 +299,7 @@ footer #map .mapboxgl-ctrl-bottom-right {
 
 .tips-container {
   text-align: center;
+  margin-bottom: 50px;
 }
 .tips-container-container {
   display: flex;
@@ -322,6 +322,9 @@ footer #map .mapboxgl-ctrl-bottom-right {
   flex-direction: column;
   justify-content: center;
   text-align: left !important;
+}
+.tips-container-animation-left p {
+  font-family: "Karla", sans-serif;
 }
 .tips-container-animation-left-title {
   font-weight: 900;
@@ -349,12 +352,145 @@ footer #map .mapboxgl-ctrl-bottom-right {
   margin-left: auto !important;
 }
 
+/****** Product page ******/
+.product-page-plan-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 2rem;
+}
+.product-page-plan-header h5 {
+  text-transform: uppercase;
+  color: #3597ee;
+  font-family: 1.7rem;
+}
+.product-page-plan-header p {
+  font-family: "Karla", sans-serif;
+}
+.product-page-plan .card-container {
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.product-page-plan .card-container .cardd {
+  background-color: transparent !important;
+  width: 330px;
+  text-align: center;
+  justify-content: space-around;
+  padding: 0;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.product-page-plan .card-container .cardd:hover {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.product-page-plan .card-container .cardd.active {
+  background-color: #3597ee !important;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.product-page-plan .card-container .cardd.active .cardd-headerr h5 {
+  color: white !important;
+}
+.product-page-plan .card-container .cardd.active .cardd-headerr p {
+  color: white;
+}
+.product-page-plan .card-container .cardd.active .cardd-body p {
+  color: white;
+}
+.product-page-plan .card-container .cardd.active .cardd-footerr-button {
+  border: 2px solid rgba(244, 250, 255, 0.5) !important;
+  color: white !important;
+  padding: 0.5rem 5rem;
+}
+.product-page-plan .card-container .cardd-headerr {
+  background-color: transparent !important;
+  padding: 2rem !important;
+}
+.product-page-plan .card-container .cardd-headerr h5 {
+  color: #3597ee;
+  font-size: 1.4rem;
+}
+.product-page-plan .card-container .cardd-headerr p {
+  color: #3597ee;
+}
+.product-page-plan .card-container .cardd-body {
+  background-color: transparent !important;
+}
+.product-page-plan .card-container .cardd-body-text {
+  color: #3597ee;
+  font-size: 2.5rem;
+}
+.product-page-plan .card-container .cardd-body-text span {
+  font-size: 1rem;
+}
+.product-page-plan .card-container .cardd-footerr {
+  background-color: transparent !important;
+  text-align: center;
+}
+.product-page-plan .card-container .cardd-footerr-button {
+  background-color: transparent !important;
+  border: 2px solid rgba(53, 151, 238, 0.5);
+  padding: 0.5rem 5rem;
+  color: #3597ee;
+  cursor: pointer;
+}
+.product-page-plan .card-container .cardd-footerr-button:hover {
+  color: #3597ee !important;
+}
+.product-page-plan .feature-container {
+  justify-content: space-between;
+}
+.product-page-plan .feature-container-card {
+  margin: 2rem 0;
+  box-sizing: content-box;
+  padding: 1rem 2.3rem;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.product-page-plan .feature-container-card-text h5 {
+  color: #3597ee;
+  font-size: 1.7rem;
+}
+
+@media (min-width: 1024px) and (max-width: 1199.99px) {
+  .product-page-plan .card-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .product-page-plan .card-container .cardd {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
 /****** Tablet ******/
 @media (min-width: 767.99px) and (max-width: 1024px) {
   /****** header ******/
   #homepage .blue-header .product-img {
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  .product-page-plan .card-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .product-page-plan .card-container .cardd {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .feature-container {
+    justify-content: space-around;
+  }
+  .feature-container-card {
+    margin: 2rem 0;
+    box-sizing: border-box;
+    padding: 1rem !important;
+  }
+  .feature-container-card-img {
+    margin: 0 auto;
   }
 }
 /****** Mobile ******/
@@ -400,6 +536,34 @@ footer #map .mapboxgl-ctrl-bottom-right {
   .tips-header-center h5 {
     text-transform: uppercase;
     font-size: 1.2rem;
+  }
+
+  .tips-container-container {
+    flex-wrap: wrap;
+  }
+  .tips-container-container div {
+    margin: 15px 0;
+  }
+
+  .product-page-plan .card-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .product-page-plan .card-container .cardd {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .product-page-plan .feature-container {
+    justify-content: space-around;
+  }
+  .product-page-plan .feature-container-card {
+    margin: 2rem 0;
+    box-sizing: border-box;
+    padding: 1rem !important;
+  }
+  .product-page-plan .feature-container-card-img {
+    margin: 0 auto;
   }
 }
 @media screen and (max-height: 450px) {

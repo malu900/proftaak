@@ -26,6 +26,8 @@ $(document).ready(function ($) {
   MapBox();
   FooterHeight();
   BounceIcon();
+  CheckIfNotPresent();
+  ActiveClass();
 
   $('.progress-container').css({
     'visibility': 'hidden'
@@ -39,6 +41,19 @@ function CheckIfPresent() {
     $('.hamburger div').css({ 'background-color': 'white' });
     $('html').addClass('hide-scrollbar');
   }
+}
+
+function CheckIfNotPresent(){
+  if($('#homepage').length <= 0) {
+    CalcHeaderHeight();
+  }
+}
+
+function CalcHeaderHeight(){
+  $(window).resize(function() {
+    $('body').css({'margin-top': $('.header').height()});
+  });
+  $(window).resize();
 }
 
 function NavigationToggle() {
@@ -131,10 +146,17 @@ function AnimateLeftTips(){
     var bottom_of_window = $(window).scrollTop() + $(window).height();
     
     if( bottom_of_window > bottom_of_element ){
-      $(this).animate({'opacity':'1','margin-left':'0' },2000);
+      $(this).animate({'opacity':'1','margin-left':'0' },1500);
     }
     
 }); 
+}
+
+function ActiveClass(){
+  $(".cardd").click(function() {
+    $(this).addClass('active').siblings().removeClass('active');
+
+    });
 }
 
 function AnimateRightTips(){
@@ -144,7 +166,7 @@ function AnimateRightTips(){
     var bottom_of_window = $(window).scrollTop() + $(window).height();
     
     if( bottom_of_window > bottom_of_element ){
-      $(this).animate({'opacity':'1','margin-left':'0' },2000);
+      $(this).animate({'opacity':'1','margin-left':'0' },1500);
     }
     
 }); 

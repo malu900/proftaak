@@ -1,4 +1,4 @@
-<footer>
+<footer id="footer">
     <div class="text-container row col-12">
         <div class="text-container-box col-12 offset-md-1 col-md-4">
             <h5> get in touch </h5>
