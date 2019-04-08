@@ -124,12 +124,35 @@ function BounceIcon(){
 //https://www.w3schools.com/graphics/google_maps_intro.asp
 function MapBox() {
   mapboxgl.accessToken = 'pk.eyJ1IjoibWFsdTkwMCIsImEiOiJjanR5amZtdTEwaTMzNDNtaGpmdmkzMmhnIn0.-PicZ5332e2dxzGoPtTjog';
+  var marker = [5.4820865, 51.4522206];
   var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/light-v9',
     center: [5.4820865, 51.4522206],
-    zoom: 12
+    zoom: 15
   });
+  var geojson = {
+    type: 'FeatureCollection',
+    features: [{
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [5.4820865, 51.4522206]
+      }
+    }]
+  };
+  geojson.features.forEach(function(marker) {
+
+    // create a HTML element for each feature
+    var el = document.createElement('div');
+    el.className = 'marker';
+  
+    // make a marker for each feature and add to the map
+    new mapboxgl.Marker(el)
+      .setLngLat(marker.geometry.coordinates)
+      .addTo(map);
+  });
+  
 }
 
 function FooterHeight(){

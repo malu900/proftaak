@@ -1,0 +1,2 @@
+Redirect 302 /index.html https://i401589.hera.fhict.nl/index.php
+RedirectMatch 302 ^/$ https://i401589.hera.fhict.nl/index.php
