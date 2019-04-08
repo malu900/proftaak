@@ -6,18 +6,18 @@
                 Aenean commodo ligula eget dolor. </p>
         </div>
         <div class="contact-links row col-12 col-md-5 offset-md-1">
-            <div class="contact-links-con one my-auto">
+            <div class="contact-links-con one">
                 <i class="far fa-envelope"></i>
                 <p> Mail </p>
                 <a> info@somnus.com </a>
             </div>
-            <div class="contact-links-con one my-auto">
-                <i class="far fa-envelope"></i>
+            <div class="contact-links-con one">
+                <i class="fas fa-mobile-alt"></i>
                 <p> Mobile </p>
                 <a> 06-12345678 </a>
             </div>
-            <div class="contact-links-con one my-auto">
-                <i class="far fa-envelope"></i>
+            <div class="contact-links-con one">
+                <i class="fas fa-map-marker-alt"></i>
                 <p> Location </p>
                 <a>
                     <span> 5611 MA </span>
