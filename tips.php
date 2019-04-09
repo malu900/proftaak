@@ -4,16 +4,16 @@
             <img src="./img/Tip1.png" class="img-fluid">
         </div>
         <div class="col-12 col-md-6 tips-container-animation-right">
-            <p> <span class="tips-container-animation-right-title"> Actief overdag </span>
-                Zorg voor elke dag minstens een halfuur flinke lichaamsbeweging zodat je ’s avonds flink moe bent
+            <p> <span class="tips-container-animation-right-title"> Be active </span>
+            Make sure you exercise for at least half an hour every day. This will result in you being tired at night.
             </p>
             <div class="line"> </div>
         </div>
     </div>
     <div class="tips-container-container">
         <div class="col-12 col-md-6 tips-container-animation-left">
-            <p> <span class="tips-container-animation-right-title"> Houdt je kamer koel </span>
-                Zet je verwarming uit als je gaat slapen, een koudere kamer is beter voor de nachtrust. Niet te koud, temperaturen van ong. 16 tot 18 graden zijn al voldoende.
+            <p> <span class="tips-container-animation-right-title"> Keep your room cool </span>
+            Turn off the radiator when you’re going to sleep. A relatively cold room is better for your rest. Be cautious to not let it get too cold. Temperatures ranging from 16 to 18 degrees Celsius are sufficient.
             </p>
             <div class="line"> </div>
         </div>
@@ -28,16 +28,16 @@
             <img src="./img/Tip3.png" class="img-fluid">
         </div>
         <div class="col-12 col-md-6 tips-container-animation-right">
-            <p> <span class="tips-container-animation-right-title"> Let op je voeding </span>
-                Let op je voeding vlak voor het slapengaan. Voorkom dat je veel suikers en/of koolhydraten binnenkrijgt voor je gaat slapen. ’s Avonds kun je beter geen koffie of andere cafeïne-/ en suikerhoudende dranken binnenkrijgen.
+            <p> <span class="tips-container-animation-right-title"> Beware of your food</span>
+            Prevent ingesting a lot of sugar or carbs shortly before going to sleep. At night it’s best to not drink any caffeine or soft drinks.
             </p>
             <div class="line"> </div>
         </div>
     </div>
     <div class="tips-container-container">
         <div class="col-12 col-md-6 tips-container-animation-left">
-            <p> <span class="tips-container-animation-right-title"> Geen beeldschermen </span>
-                Beeldschermen houden ons actief. Dit komt omdat het blauwe licht onze hersenen activeert. Daarom is het beter om uiterlijk een uur voordat je naar bed gaat, geen beeldschermen meer te zien. Denk er ook over na om ’s avonds je beeldscherm een oranje kleur te laten weergeven. Een oranje kleur werkt slaapwekkend op onze hersenen.
+            <p> <span class="tips-container-animation-right-title"> No screens </span>
+            Screens keep people active. The blue light emitted by screens keeps our brains active. It’s best to not look at screens for at least an hour before you go to bed. Consider using an orange screen filter. Orange induces sleep in human brains.
             </p>
             <div class="line"> </div>
         </div>
@@ -51,16 +51,16 @@
             <img src="./img/Tip5.png" class="img-fluid">
         </div>
         <div class="col-12 col-md-6 tips-container-animation-right">
-            <p> <span class="tips-container-animation-right-title"> Drink niet te veel alcohol </span>
-                Wanneer je alcohol drinkt, kom je moeilijk in slaap. En als je dan eindelijk slaapt, dan slaap je vaker onrustig.
+            <p> <span class="tips-container-animation-right-title"> Be cautious with alcohol</span>
+            Sleep induced under the influence of alcohol isn’t good sleep. You’ll still feel exhausted when you wake up.
             </p>
             <div class="line"> </div>
         </div>
     </div>
     <div class="tips-container-container">
         <div class="col-12 col-md-6 tips-container-animation-left">
-            <p> <span class="tips-container-animation-right-title"> Warme douch/bad </span>
-                Wanneer je een warm bad of een warme douch neemt voor het slapengaan, dan wordt je lichaam alvast ontspannen. Zorg er dan wel voor dat je geen koude douche/bad neemt, want koude temperaturen werken juist weer activerend.
+            <p> <span class="tips-container-animation-right-title"> Hot shower/bath</span>
+                When you take a hot bath or a hot shower moments before going to bed, your body will relax. A relaxed body tends to fall asleep quicker. Don’t take a cold shower or bath before going to sleep, because low temperatures make your body active.
             </p>
             <div class="line"> </div>
         </div>
@@ -74,15 +74,15 @@
             <img src="./img/Tip7.png" class="img-fluid">
         </div>
         <div class="col-12 col-md-6 tips-container-animation-right">
-            <p> <span class="tips-container-animation-right-title"> Verwerk problemen </span>
-                Wanneer je naar bed gaat terwijl je iets dwars zit, slaap je slechter doordat je er alsmaar over nadenkt. Zorg dat je naar bed gaat met een ‘open’ gedachte. Dus schrijf alle problemen van je af voor het slapen gaan, zodat je er niet over na hoeft te denken.
+            <p> <span class="tips-container-animation-right-title"> Process problems </span>
+            Whenever you go to bed with something on your mind, you won’t fall asleep as easily because you keep thinking about that certain thing instead of relaxing. Going to bed with a clear mind is optimal. Make sure you deal with problems before your night’s rest.
             </p>
             <div class="line"> </div>
         </div>
     </div>
     <div class="tips-container-container">
         <div class="col-12 col-md-6 tips-container-animation-left">
-            <p> <span class="tips-container-animation-right-title"> Goed bed </span>
+            <p> <span class="tips-container-animation-right-title"> Comfortable bed </span>
             Zorg voor een zacht matras en kussen. Een oncomfortabel bed zorgt ervoor dat je je niet goed kunt focussen op je rust 
             </p>
             <div class="line"> </div>
@@ -97,16 +97,16 @@
             <img src="./img/Tip9.png" class="img-fluid">
         </div>
         <div class="col-12 col-md-6 tips-container-animation-right">
-            <p> <span class="tips-container-animation-right-title"> Zorg voor weinig licht </span>
-            In het donker komen je hersenen meer tot rust dan wanneer het licht is. Heb je iets in je kamer wat een fel licht afgeeft, kijk hier dan niet naar wanneer je wilt slapen.  
+            <p> <span class="tips-container-animation-right-title"> Limit amount of light </span>
+            When it’s dark, our brains can rest much better than when it’s light. If you happen to have a bright light inside your room, then don’t look at it before going to sleep.
             </p>
             <div class="line"> </div>
         </div>
     </div>
     <div class="tips-container-container">
         <div class="col-12 col-md-6 tips-container-animation-left">
-            <p> <span class="tips-container-animation-right-title"> Regelmaat in slaapgedrag </span>
-            Probeer elke dag hetzelfde ritme aan te houden. Probeer rond dezelfde tijden naar bed te gaan en op te staan. Doe ook overdag geen dutjes, want dit verstoort je ritme waardoor je ’s avonds ineens veel minder moe bent 
+            <p> <span class="tips-container-animation-right-title"> Schedule sleeping behavior </span>
+            Try going to bed every night and get up in the morning around the same time every day. Don’t take naps during daytime, because this can ruin your sleep pattern.
             </p>
             <div class="line"> </div>
         </div>

@@ -24,15 +24,11 @@
     <div class="container about-page">
         <div class="about-page-header">
             <h5> Philosophy </h5>
-            <p class="col-12 col-md-8"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Aenean commodo ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Aenean commodo ligula eget dolor. </p>
+            <p class="col-12 col-md-8">The idea of this project came to be while discussing sleep matters in the morning. Because most of us didn’t get enough sleep that night, we came up with the idea of doing something sleep related. We wanted to help ourselves and others sleep better at night. After a long session of brainstorming we finally got an idea. We developed a mat with built-in alarm and statistics sending capabilities. We present to you: ‘Somnus’.</p>
         </div>
         <div class="about-page-header">
             <h5> Our Team </h5>
-            <p class="col-12 col-md-6"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Aenean commodo ligula eget dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Aenean commodo ligula eget dolor. </p>
+            <p class="col-12 col-md-6"> Below you see the members of Somnus. These people worked very hard to create an outstanding product.. </p>
         </div>
         <?php include('team_cards.php'); ?>
     </div>

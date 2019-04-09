@@ -28,12 +28,8 @@
     <div class="container-fluid blue-header">
       <div class="row product h-100">
         <div class="product-text col-12 col-md-5 offset-md-6  offset-md-6 my-auto">
-          <h3> PRODUCT TITLE </h3>
-          <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-            Nulla consequat massa quis enim.</p>
+          <h3> SOMNUS</h3>
+          <p> The number one struggle of students is sleep deprivation. Thinking about this issue, we came up with a solution. Our product ‘Somnus’ will improve the sleep patterns of its users. Our device will track its users sleeping behavior and makes the statistics visible in the compatible application. With Somnus you’ll feel better!</p>
         </div>
         <div class="product-img col-10 col-md-5 col-lg-4 offset-md-1 offset-lg-1">
           <img src="img/mat-new.png" class="img-fluid" />
@@ -43,7 +39,7 @@
   </div>
   <div class="tips-header col-12 col-md-10  col-lg-5 offset-md-1 offset-lg-6">
     <div class="tips-header-center my-auto">
-      <h5> Tips voor een betere nachtrust </h5>
+      <h5> Tips for a better night's rest </h5>
       <a href="#tips"> <i class="fas fa-angle-down"></i></a>
     </div>
   </div>

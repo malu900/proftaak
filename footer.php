@@ -2,8 +2,7 @@
     <div class="text-container row col-12">
         <div class="text-container-box col-12 offset-md-1 col-md-4">
             <h5> get in touch </h5>
-            <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                Aenean commodo ligula eget dolor. </p>
+            <p>If you have any questions or business inquiries, you can visit our establishment or contact us. </p>
         </div>
         <div class="contact-links row col-12 col-md-5 offset-md-1">
             <div class="contact-links-con one">
